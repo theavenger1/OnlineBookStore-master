@@ -1,0 +1,27 @@
+﻿ @model IEnumerable<BookStore.Models.book>
+<!-- store products -->
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <!-- product -->
+        <div class="col-6 col-lg-4">
+            <div class="product">
+                <div class="product-img">
+                    <img class="img-fluid" src="~/Uploads/@Html.DisplayFor(aa =>item.book_image)" alt="">
+                </div>
+                <div class="product-body">
+                    <p class="product-category">
+                        @Html.DisplayFor(modelItem => item.category.category_name)
+                    </p>
+                    @{var a = Html.DisplayFor(modelItem => item.book_title).ToString();}
+                    <h3 class="product-name">@a</h3>
+                    <h4 class="product-price">@Html.DisplayFor(modelItem => item.book_cost) $</h4>
+
+                    @Html.ActionLink("Details", "Details","books", new { id = item.Id },null)
+
+                </div>
+            </div>
+        </div>
+        <!-- /product -->
+    }
+</div>

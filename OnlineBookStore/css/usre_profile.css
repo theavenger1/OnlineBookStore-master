@@ -1,0 +1,74 @@
+.navigation {
+    background-color: #fff;
+}
+.breadcrumb {
+    background-color: transparent;
+    font-size: 20px;
+
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 15px;
+    font-weight: bold;
+    content: '\f054';
+}
+
+:root {
+    /* var(--main-btn-bg-color) */
+    --main-btn-bg-color: #d07347;
+}
+
+#my-books {
+    margin-right: 8.333%;
+}
+
+.header {
+    background-color: var(--main-btn-bg-color);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: normal;
+}
+
+
+button {
+    height: 40px;
+    background: var(--main-btn-bg-color);
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.product .product-img>img {
+    width: 100%;
+    height: 450px;
+}
+
+/* 
+.multiple-items {
+    width: 100%;
+} */
+
+label {
+    font-weight: 700;
+}
+
+.responsive {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: var(--main-btn-bg-color);
+}
+
+.slick-slide {
+    /* display: inline-block;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    padding-left: 5px;
+    padding-right: 5px;
+}

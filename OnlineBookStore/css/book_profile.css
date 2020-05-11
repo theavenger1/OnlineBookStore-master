@@ -1,0 +1,247 @@
+.navigation {
+    background-color: #fff;
+}
+.breadcrumb {
+    background-color: transparent;
+    font-size: 20px;
+
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 15px;
+    font-weight: bold;
+    content: '\f054';
+}
+
+:root {
+    /* var(--main-btn-bg-color) */
+    --main-btn-bg-color: #d07347;
+}
+
+#my-books {
+    margin-right: 8.333%;
+}
+
+.header {
+    background-color: var(--main-btn-bg-color);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: normal;
+}
+
+
+button {
+    height: 40px;
+    background: var(--main-btn-bg-color);
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.product .product-img>img {
+    width: 100%;
+    height: 450px;
+}
+
+/* 
+.multiple-items {
+    width: 100%;
+} */
+
+label {
+    font-weight: 700;
+}
+
+.responsive {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: var(--main-btn-bg-color);
+}
+
+.slick-slide {
+    /* display: inline-block;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.product-rating>i.fa-star:hover {
+    color: var(--main-btn-bg-color);
+    cursor: pointer;
+}
+
+
+
+/*-- Rating --*/
+
+.rating-avg {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.rating-avg .rating-stars {
+    margin-left: 10px;
+}
+
+.rating-avg .rating-stars, .rating .rating-stars {
+    display: inline-block;
+}
+
+.rating-avg .rating-stars>i, .rating .rating-stars>i {
+    color: #E4E7ED;
+}
+
+.rating-avg .rating-stars>i.fa-star, .rating .rating-stars>i.fa-star {
+    color: var(--main-btn-bg-color);
+}
+
+.rating li {
+    margin: 5px 0px;
+}
+
+.rating .rating-progress {
+    position: relative;
+    display: inline-block;
+    height: 9px;
+    background-color: #E4E7ED;
+    width: 120px;
+    margin: 0px 10px;
+    border-radius: 5px;
+}
+
+.rating .rating-progress>div {
+    background-color: var(--main-btn-bg-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+
+.rating .sum {
+    display: inline-block;
+    font-size: 12px;
+    color: #8D99AE;
+}
+
+/*-- Reviews --*/
+
+.reviews li {
+    position: relative;
+    padding-left: 145px;
+    margin-bottom: 30px;
+}
+
+.reviews .review-heading {
+    position: absolute;
+    width: 130px;
+    left: 0;
+    top: 0;
+    height: 70px;
+}
+
+.reviews .review-body {
+    min-height: 70px;
+}
+
+.reviews .review-heading .name {
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.reviews .review-heading .date {
+    color: #8D99AE;
+    font-size: 10px;
+    margin: 0;
+}
+
+.reviews .review-heading .review-rating {
+    margin-top: 5px;
+}
+
+.reviews .review-heading .review-rating>i {
+    color: #E4E7ED;
+}
+
+.reviews .review-heading .review-rating>i.fa-star {
+    color: var(--main-btn-bg-color);
+}
+
+.reviews-pagination {
+    text-align: center;
+}
+
+.reviews-pagination li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #FFF;
+    border: 1px solid #E4E7ED;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.reviews-pagination li:hover {
+    background-color: #E4E7ED;
+    color: var(--main-btn-bg-color);
+}
+
+.reviews-pagination li.active {
+    background-color: var(--main-btn-bg-color);
+    border-color: var(--main-btn-bg-color);
+    color: #FFF;
+    cursor: default;
+}
+
+.reviews-pagination li a {
+    display: block;
+}
+
+/*-- Review Form --*/
+
+.review-form .input-rating {
+    margin-bottom: 15px;
+}
+
+.review-form .input-rating .stars {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.review-form .input-rating .stars input[type="radio"] {
+    display: none;
+}
+
+.review-form .input-rating .stars>label {
+    float: right;
+    cursor: pointer;
+    padding: 0px 3px;
+    margin: 0px;
+}
+
+.review-form .input-rating .stars>label:before {
+    content: "\f005";
+    font-family: 'Font Awesome 5 Free';
+    color: #E4E7ED;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.review-form .input-rating .stars>label:hover:before, .review-form .input-rating .stars>label:hover~label:before {
+    color: var(--main-btn-bg-color);
+}
+
+.review-form .input-rating .stars>input:checked label:before, .review-form .input-rating .stars>input:checked~label:before {
+content: "\f005";
+    color: var(--main-btn-bg-color);
+}

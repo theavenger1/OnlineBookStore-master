@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/nouislider.min.css" />
+    <link rel="stylesheet" href="~/css/all.css">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>ATHAR</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="d-block navbar navbar navbar-expand navbar-ligh ">
+        <div class="row m-auto justify-content-center">
+            <!-- LOGO -->
+            <div class="col-6 col-lg-2 m-lg-auto">
+                <div class="header-logo">
+                    <a href="~/Home/Index" class="logo">
+                        <img class="img-fluid" src="~/img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- /LOGO -->
+            <!-- SEARCH -->
+            <div class="col-lg-7 m-lg-auto mt-3">
+                <div class="header-search">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Post, new { @class = "row justify-content-center" }))
+                    {
+                        <select class=" col-6 col-md-4 input-select">
+                            <option value="0">All Categories</option>
+                            <option value="1">Category 01</option>
+                            <option value="2">Category 02</option>
+                            <option value="3">Category 03</option>
+                        </select>
+                        <input type="text" class="input col-6 col-md-5" name="searchName" id="searchName" placeholder="Search Here.." />
+                        <button class=" col-12 search-btn col-md-3 mt-1 mt-md-0">Search</button>
+
+                    }
+                    @*<form class="row justify-content-center">
+            <select class=" col-6 col-md-4 input-select">
+                <option value="0">All Categories</option>
+                <option value="1">Category 01</option>
+                <option value="2">Category 02</option>
+                <option value="3">Category 03</option>
+            </select>
+            <input class="input col-6 col-md-5" placeholder="Search Here.." id="searchName" name="">
+            <button class=" col-12 search-btn col-md-3 mt-1 mt-md-0">Search</button>
+        </form>*@
+                </div>
+            </div>
+            <!-- /SEARCH -->
+            <!-- NAVS -->
+            <ul class="navbar-nav col-lg-3  mt-3 justify-content-center text-center">
+                @Html.Partial("_LoginPartial")
+            </ul>
+            <!-- /NAVS-->
+        </div>
+    </nav>
+    <!-- /NAVBAR -->
+
+    <!-- STORE SECTION -->
+    <div class="section store-section">
+        <!-- container -->
+        <div class="container">
+            @RenderBody()
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /STORE SECTION -->
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Contact Us</h3>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>Zagazig, Ash Sharqia, Egypt</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+02-0123456789</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>email@email.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Categories</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Architecture</a></li>
+                                <li><a href="#">Computers and Internet</a></li>
+                                <li><a href="#">Cooking and Food</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Information</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Service</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">View Cart</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span class="copyright">
+                            Copyright ©
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved
+                        </span>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+    <!-- Start Script -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/nouislider.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <!-- End Script -->
+    @RenderSection("scriptsHere", required: false)
+
+
+</body>
+
+</html>

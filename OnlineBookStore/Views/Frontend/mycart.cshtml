@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cart-style.css">
+    <title>My Cart</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="d-block navbar navbar navbar-expand navbar-ligh ">
+        <div class="row m-auto justify-content-center">
+            <!-- LOGO -->
+            <div class="col-6 col-lg-2 m-lg-auto">
+                <div class="header-logo">
+                    <a href="./index.html" class="logo">
+                        <img class="img-fluid" src="./img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- /LOGO -->
+            <!-- SEARCH -->
+            <div class="col-lg-7 m-lg-auto mt-3">
+                <div class="header-search">
+                    <form class="row justify-content-center">
+                        <select class=" col-6 col-md-4 input-select">
+                            <option value="0">All Categories</option>
+                            <option value="1">Category 01</option>
+                            <option value="2">Category 02</option>
+                            <option value="3">Category 03</option>
+                        </select>
+                        <input class="input col-6 col-md-5" placeholder="Book Name">
+                        <button class=" col-12 search-btn col-md-3 mt-1 mt-md-0">Search</button>
+                    </form>
+                </div>
+            </div>
+            <!-- /SEARCH -->
+            <!-- NAVS -->
+            <ul class="navbar-nav col-lg-3  mt-3 justify-content-center text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="./mycart.html">
+                        <i class="d-block text-center fas fa-shopping-cart "></i>
+                        <span>My Cart</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./user_profile.html">
+                        <i class="d-block text-center fas fa-user "></i>
+                        <span>My Account</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="d-block text-center fas fa-sign-out-alt "></i>
+                        <span>Sign Out</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">
+                        <i class="d-block text-center fas fa-sign-in-alt"></i>
+                        <span>Sign In</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- /NAVS-->
+        </div>
+    </nav>
+    <!-- /NAVBAR -->
+    <nav class="navigation" aria-label="breadcrumb ">
+        <div class="container">
+            <ol class="breadcrumb  ">
+                <li class="breadcrumb-item"><a href="./index.html">Store</a></li>
+                <li class="breadcrumb-item active" aria-current="page">My Cart</li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row justify-content-center">
+            <table class=" col-12 table table-striped bg-light text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Book Name</th>
+                        <th class="d-none d-sm-block" scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="order-item-data-0">
+                        <th scope="row">Book Name Number One</th>
+                        <td class="price d-none d-sm-block">15.00</td>
+                        <td>2</td>
+                        <td class="price">30.00</td>
+                        <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                    </tr>
+                    <tr id="order-item-data-1">
+                        <th scope="row">Book Name Number Two</th>
+                        <td class="price d-none d-sm-block">30</td>
+                        <td>4</td>
+                        <td class="price">120.00</td>
+                        <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                    </tr>
+                    <tr id="order-item-data-2">
+                        <th scope="row">Book Name Number Three </th>
+                        <td class="price d-none d-sm-block">60</td>
+                        <td>1</td>
+                        <td class="price">60.00</td>
+                        <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-12 total-price row p-2 m-5 ">
+                <h4 class="col-6 col-md-3 text-center m-0 p-2">Total Price</h4>
+                <h5 class="col-6 col-md-3 text-center m-0 price p-2">210.00</h5>
+                <button class="col-12 col-md-6 ml-auto mt-3 mt-md-0 p-2">Checkout <i
+                        class="fas fa-arrow-circle-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Contact Us</h3>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>Zagazig, Ash Sharqia, Egypt</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+02-0123456789</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>email@email.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Categories</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Architecture</a></li>
+                                <li><a href="#">Computers and Internet</a></li>
+                                <li><a href="#">Cooking and Food</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Information</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Service</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">View Cart</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span class="copyright">
+                            Copyright ©
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved
+                        </span>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+
+    <!-- Start Script -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- End Script -->
+
+</body>
+
+</html>

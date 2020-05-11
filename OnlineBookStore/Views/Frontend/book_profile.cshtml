@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/all.css">
+    <link rel="stylesheet" href="~/css/lib/slick/slick.css">
+    <link rel="stylesheet" href="~/css/lib/slick/slick-theme.css">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/book_profile.css" />
+    <title>Book</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="d-block navbar navbar navbar-expand navbar-ligh ">
+        <div class="row m-auto justify-content-center">
+            <!-- LOGO -->
+            <div class="col-6 col-lg-2 m-lg-auto">
+                <div class="header-logo">
+                    <a href="./index.html" class="logo">
+                        <img class="img-fluid" src="./img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- /LOGO -->
+            <!-- SEARCH -->
+            <div class="col-lg-7 m-lg-auto mt-3">
+                <div class="header-search">
+                    <form class="row justify-content-center">
+                        <select class=" col-6 col-md-4 input-select">
+                            <option value="0">All Categories</option>
+                            <option value="1">Category 01</option>
+                            <option value="2">Category 02</option>
+                            <option value="3">Category 03</option>
+                        </select>
+                        <input class="input col-6 col-md-5" placeholder="Book Name">
+                        <button class=" col-12 search-btn col-md-3 mt-1 mt-md-0">Search</button>
+                    </form>
+                </div>
+            </div>
+            <!-- /SEARCH -->
+            <!-- NAVS -->
+            <ul class="navbar-nav col-lg-3  mt-3 justify-content-center text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="./mycart.html">
+                        <i class="d-block text-center fas fa-shopping-cart "></i>
+                        <span>My Cart</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./user_profile.html">
+                        <i class="d-block text-center fas fa-user "></i>
+                        <span>My Account</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="d-block text-center fas fa-sign-out-alt "></i>
+                        <span>Sign Out</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">
+                        <i class="d-block text-center fas fa-sign-in-alt"></i>
+                        <span>Sign In</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- /NAVS-->
+        </div>
+    </nav>
+    <!-- /NAVBAR -->
+    <nav class="navigation" aria-label="breadcrumb ">
+        <div class="container">
+            <ol class="breadcrumb  ">
+                <li class="breadcrumb-item"><a href="./index.html">Store</a></li>
+                <li class="breadcrumb-item " aria-current="page">Computer and Technology</li>
+                <li class="breadcrumb-item active" aria-current="page">KINGDOM OF LIES</li>
+            </ol>
+        </div>
+    </nav>
+    <!-- BookPage section -->
+    <div class="container bg-light p-3 mb-3">
+        <div class="row ">
+            <!-- Book img -->
+            <div class="col-12 col-md-3 ">
+                <div class="product-img text-center">
+                    <img class="img-fluid" src="./img/product02.png" alt="book cover">
+                </div>
+                <a href="javascript:history.back()" class="full-button btn mt-2 mb-2"><span
+                        class="fa fa-chevron-left"></span>
+                    Previous Page</a>
+            </div>
+            <!-- Book Details -->
+            <div class="col-12 col-md-9 ">
+                <h4 class="mt-2 mt-md-0 text-center text-md-left">KINGDOM OF LIES</h4>
+                <table class=" table table-striped  ">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Publicher:</th>
+                            <td>Adrian M.Locas</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Auther:</th>
+                            <td>Ahmed Essam</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Prince:</th>
+                            <td>20.35 $</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">In Stock:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Address:</th>
+                            <td>Zagazig,Egypt</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Page Count:</th>
+                            <td>320</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">weight:</th>
+                            <td>2<span>Kg</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Size:</th>
+                            <td>
+                                <div id="length"><span>length: </span>11.80 <span>cm</span></div>
+                                <div id="width"><span>width: </span>8.25 <span>cm</span></div>
+                                <div id="height"><span>height: </span> 0.87 <span>cm</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Description:</th>
+                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quibusdam dolor libero
+                                quis quod autem iste dicta porro nulla, consequuntur eos blanditiis laudantium quaerat
+                                eaque ut optio debitis rem illum!</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form>
+                    <div class="form-group">
+                        <label for="QTY">QTY</label>
+                        <input type="number" class="form-control qty" id="QYT" name="QTY" placeholder="0.00 "
+                            min="0.00">
+                    </div>
+                    <button type="submit" class=" text-center full-button"><i class="fas fa-shopping-cart"></i> Add
+                        to
+                        cart</button>
+                </form>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <div class="row ">
+                        <!-- Rating -->
+                        <div class="col-12 col-lg-4 text-center mb-3">
+                            <div id="rating">
+                                <div class="rating-avg">
+                                    <span>4.5</span>
+                                    <div class="rating-stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <ul class="rating">
+                                    <li>
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <div class="rating-progress">
+                                            <div style="width: 80%;"></div>
+                                        </div>
+                                        <span class="sum">3</span>
+                                    </li>
+
+                                    <li>
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <div class="rating-progress">
+                                            <div style="width: 50%;"></div>
+                                        </div>
+                                        <span class="sum">8</span>
+                                    </li>
+                                    <li>
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <div class="rating-progress">
+                                            <div></div>
+                                        </div>
+                                        <span class="sum">0</span>
+                                    </li>
+                                    <li>
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <div class="rating-progress">
+                                            <div></div>
+                                        </div>
+                                        <span class="sum">0</span>
+                                    </li>
+                                    <li>
+                                        <div class="rating-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <div class="rating-progress">
+                                            <div></div>
+                                        </div>
+                                        <span class="sum">0</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /Rating -->
+
+                        <!-- Reviews -->
+                        <div class="col-12 col-lg-8 ">
+                            <div id="reviews">
+                                <ul class="reviews">
+                                    <li>
+                                        <div class="review-heading">
+                                            <h5 class="name">Ahmed Essam</h5>
+                                            <p class="date">27 DEC 2020, 8:0 PM</p>
+                                            <div class="review-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="review-heading">
+                                            <h5 class="name">Ahmed Essam</h5>
+                                            <p class="date">27 DEC 2020, 8:0 PM</p>
+                                            <div class="review-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="review-heading">
+                                            <h5 class="name">Ahmed Essam</h5>
+                                            <p class="date">27 DEC 2020, 8:0 PM</p>
+                                            <div class="review-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="reviews-pagination">
+                                    <li class="active">1</li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /Reviews -->
+
+                        <!-- Review Form -->
+                        <div class="col-12 mt-3 mb-3">
+                            <div id="review-form">
+                                <form class="review-form">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Your Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="email" placeholder="Your Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" style="min-height: 100px;"
+                                            placeholder="Your Review"></textarea>
+                                    </div>
+                                    <div class="input-rating">
+                                        <span>Your Rating: </span>
+                                        <div class="stars">
+                                            <input id="star5" name="rating" value="5" type="radio"><label
+                                                for="star5"></label>
+                                            <input id="star4" name="rating" value="4" type="radio"><label
+                                                for="star4"></label>
+                                            <input id="star3" name="rating" value="3" type="radio"><label
+                                                for="star3"></label>
+                                            <input id="star2" name="rating" value="2" type="radio"><label
+                                                for="star2"></label>
+                                            <input id="star1" name="rating" value="1" type="radio"><label
+                                                for="star1"></label>
+                                        </div>
+                                    </div>
+                                    <button class="">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /Review Form -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 ">
+                <h2 class="text-center header">Also By The Same Auther</h2>
+                <div class="container">
+                    <div class="responsive ">
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product01.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product02.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product03.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product04.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product05.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product06.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 ">
+                <h2 class="text-center header">Also By This Publicher</h2>
+                <div class="container">
+                    <div class="responsive ">
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product01.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product02.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product03.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product04.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product05.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img class="img-fluid" src="./img/product06.png" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">BOOK NAME</a></h3>
+                                <h4 class="product-price">$59.00</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End BookPage section -->
+    </div>
+    <!-- FOOTER -->
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Contact Us</h3>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>Zagazig, Ash Sharqia, Egypt</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+02-0123456789</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>email@email.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Categories</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Architecture</a></li>
+                                <li><a href="#">Computers and Internet</a></li>
+                                <li><a href="#">Cooking and Food</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Information</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Service</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">View Cart</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span class="copyright">
+                            Copyright ©
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved
+                        </span>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+
+    <!-- Start Script -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/css/lib/slick/slick.js"></script>
+    <script src="~/js/book_profile.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>

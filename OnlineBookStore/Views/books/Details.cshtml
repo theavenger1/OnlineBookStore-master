@@ -1,0 +1,87 @@
+﻿@model BookStore.Models.book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!-- BookPage section -->
+    <div class="container bg-light p-3 mb-3">
+        <div class="row ">
+            <!-- Book img -->
+            <div class="col-12 col-md-3 ">
+                <div class="product-img text-center">
+                    <img class="img-fluid" src="~/Uploads/@Model.book_image" alt="book cover">
+                </div>
+                <a href="javascript:history.back()" class="full-button btn mt-2 mb-2">
+                    <span class="fa fa-chevron-left"></span>
+                    Previous Page
+                </a>
+            </div>
+            <!-- Book Details -->
+            <div class="col-12 col-md-9 ">
+                <h4 class="mt-2 mt-md-0 text-center text-md-left">@Model.book_title</h4>
+                <table class=" table table-striped  ">
+                    <tbody>
+                        @*<tr>
+                            <th scope="row">Publicher:</th>
+                            <td>@Model.user.UserName</td>
+                        </tr>*@
+                        @*<tr>
+                            <th scope="row">Auther:</th>
+                            <td>Ahmed Essam</td>
+                        </tr>*@
+                        <tr>
+                            <th scope="row">Prince:</th>
+                            <td>@Model.book_cost $</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">In Stock:</th>
+                            <td>@Model.no_of_books</td>
+                        </tr>
+                        @*<tr>
+                            <th scope="row">Address:</th>
+                            <td>@Model.user.user_address</td>
+                        </tr>*@
+                        @*<tr>
+                            <th scope="row">Page Count:</th>
+                            <td>320</td>
+                        </tr>*@
+                        <tr>
+                            <th scope="row">weight:</th>
+                            <td>@Model.book_weight<span>Kg</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Size:</th>
+                            <td>
+                                <div id="length"><span>length: </span>@Model.book_height <span>cm</span></div>
+                                <div id="width"><span>width: </span>@Model.book_width <span>cm</span></div>
+                                @*<div id="height"><span>height: </span> 0.87 <span>cm</span></div>*@
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Description:</th>
+                            <td>
+                                @Model.book_description
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form>
+                    @*<div class="form-group">
+                        <label for="QTY">QTY</label>
+                        <input type="number" class="form-control qty" id="QYT" name="QTY" placeholder="0.00 "
+                               min="0.00">
+                    </div>*@
+              
+                    @Html.ActionLink("Add to Cart","Addtocart", "Mycart", new { id = Model.Id }, new { @class = " text-center full-button" })
+              
+                    <button type="submit" class=" text-center full-button" herf ="~/Mycart/Addtocart"> 
+                        <i class="fas fa-shopping-cart"></i> Add
+                        to
+                        cart
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+            @Html.ActionLink("Back to List", "Index","Home",null, new { @class = "btn" })

@@ -1,0 +1,147 @@
+﻿@model BookStore.Models.book
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container mb-3 ">
+    <!-- Upload books -->
+    <div id="upload-books" class="col-12 col-lg-8 bg-white p-0 mt-3 mt-lg-0">
+        <h2 class="text-center header">Upload New Book</h2>
+        @using (Html.BeginForm("Create", "books", FormMethod.Post, new { enctype = "multipart/form-data" , @class="bg-white p-4" }))
+       
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label for="book_title">Book Title</label>
+                <input type="text" class="form-control" id="book_title" name="book_title"
+                       placeholder="Enter book title" required>
+            </div>
+            <!-- <div class="form-group">
+            <label for="book_author">Book Author</label>
+            <input type="text" class="form-control" id="book_author" name="book_author"
+                placeholder="Enter author name" required>
+        </div> -->
+            <div class="form-group">
+                <label for="book-category">Category</label>
+                @Html.DropDownList("categoryId", null, htmlAttributes: new { @class = "custom-select" })
+                @Html.ValidationMessageFor(model => model.categoryId, "", new { @class = "text-danger" })
+            </div>
+            @*<select class="custom-select" id="categoryId" name="categoryId">
+             <option value="1" selected>Science</option>
+             <option value="2">History</option>
+             <option value="3">Sports</option>
+            </select> *@
+
+
+
+            @*<div class="form-group">
+                <label for="book_image">Image</label>
+                <div class="custom-file">
+                    <input type="file" name="upload" id="myImage">
+                    @* <input type="file" name="upload" id="myImage" />
+                </div>
+            </div>*@
+
+            <div class="form-group">
+                <label for="bookbook_image"> Book Image</label>
+                <div class="custom-file">
+                    <input type="file" name="upload" id="myImage" />
+                    @Html.ValidationMessageFor(model => model.book_image, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="book_cost" name="book_cost" placeholder="0.0"
+                       min="0.00" required>
+            </div>
+            <div class="form-group">
+                <label for="no_of_books">No Of Books</label>
+                <input type="number" class="form-control" id="no_of_books" name="no_of_books" placeholder="0.0 "
+                       min="0.00" required>
+            </div>
+            <!-- <div class="form-group">
+            <label for="page_count">Page Count</label>
+            <input type="number" class="form-control" id="page_count" name="page_count" placeholder="0"
+                min="0" required>
+        </div> -->
+            <div class="form-group">
+                <label for="book_weight">Weight</label>
+                <input type="number" class="form-control" id="book_weight" name="book_weight" placeholder="0" min="0"
+                       required>
+            </div>
+            <div class="row">
+                <div class="form-group col-4">
+                    <label for="book_height">Length</label>
+                    <input type="number" class="form-control" id="book_height" name="book_height" placeholder="0 cm"
+                           min="0" required>
+                </div>
+                <div class="form-group col-4">
+                    <label for="width">Widht</label>
+                    <input type="number" class="form-control" id="book_width" name="book_width" placeholder="0 cm"
+                           min="0" required>
+                </div>
+                <!-- <div class="form-group col-4">
+                <label for="height">Height</label>
+                <input type="number" class="form-control" id="height" name="height" placeholder="0 cm"
+                    min="0" required>
+            </div> -->
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="book_description" name="book_description" placeholder="Enter book description"
+                          style="min-height: 100px;" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter book description.
+                </div>
+            </div>
+            <input type="submit" value="Create" class="btn btn-default" id="save" />
+
+        }
+    </div>
+</div>
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+@section scriptsHere{
+    <script>
+        $(function () {
+            $("#save").click(function () {
+
+                //check if the input is Empty
+                if ($("#myImage").val() == "") {
+                    $("#error-div").fadeIn();
+                    $("#view-err").append("Choose the photo first please");
+                    return false;//to not make submit
+                }
+                //check if the image extention is valid
+                if ($("#myImage").val() != "") {
+                    var filename = document.getElementById("myImage").value;
+                    var extentionImg = filename.substr(filename.lastIndexOf('.') + 1);
+                    var validExtention = ['jpg', 'png', 'gif'];
+                    if ($.inArray(extentionImg, validExtention) == -1) {
+                        $("#error-div").fadeIn();
+                        $("#view-err").append("Choose the photo with a valid extention");
+                        return false;
+                    }
+                    //check if the image size is valid =2mb
+                    var imgSize = document.getElementById("myImage").files[0].size / 1024 / 1024;
+                    if (imgSize > 2) {
+                        $("#error-div").fadeIn();
+                        $("#view-err").append("Choose the photo size less than 2 mb");
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+}
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

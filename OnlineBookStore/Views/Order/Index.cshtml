@@ -1,0 +1,60 @@
+﻿@model IEnumerable<BookStore.Models.order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Orders</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.userId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.order_state)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.user.user_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderCreated)
+
+        </th>
+        <th>
+
+        </th>
+
+
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.user.UserName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.order_state)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.user.user_address)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.OrderCreated)
+    </td>
+
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+    </td>
+</tr>
+}
+
+</table>

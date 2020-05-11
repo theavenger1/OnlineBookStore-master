@@ -1,0 +1,107 @@
+﻿@using Microsoft.AspNet.Identity
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "row" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        @*<li class="nav-item">
+                @Html.ActionLink("Hi," + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage",@class="nav-link"})
+            </li>*@
+
+        @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
+
+        if (User.IsInRole("Admins"))
+        {
+
+            <li class="nav-item">
+                <a class="nav-link" href="~/categories/Create">
+                    <i class="d-block text-center fas fa-sign-out-alt "></i>
+                    <span>Add category</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">
+                    <i class="d-block text-center fas fa-sign-out-alt "></i>
+                    <span>Sign Out</span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">
+                    <i class="d-block text-center fas fa-sign-out-alt "></i>
+                    <span>Sign Out</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/mycart">
+                    <i class="d-block text-center fas fa-shopping-cart "></i>
+                    <span>My Cart</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/books/Create">
+                    <i class="d-block text-center fas fa-book-open "></i>
+                    <span>Add Book</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/books/GetUserBooks">
+                    <i class="d-block text-center fas fa-book "></i>
+                    <span>Your Books</span>
+                </a>
+
+            </li>
+
+        }
+
+    }
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link" href="~/Account/Login">
+            <i class="d-block text-center fas fa-sign-in-alt"></i>
+            <span>Sign In</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="~/Account/Register">
+            <i class="d-block text-center fas fa-user-plus"></i>
+            <span>Sign Up</span>
+        </a>
+    </li>
+}
+
+@*<ul class="navbar-nav col-lg-3  mt-3 justify-content-center text-center">
+        <li class="nav-item">
+            <a class="nav-link" href="./mycart.cshtml">
+                <i class="d-block text-center fas fa-shopping-cart "></i>
+                <span>My Cart</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./user_profile.cshtml">
+                <i class="d-block text-center fas fa-user "></i>
+                <span>My Account</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="d-block text-center fas fa-sign-out-alt "></i>
+                <span>Sign Out</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="~/Account/Login">
+                <i class="d-block text-center fas fa-sign-in-alt"></i>
+                <span>Sign In</span>
+            </a>
+        </li>
+    </ul>*@

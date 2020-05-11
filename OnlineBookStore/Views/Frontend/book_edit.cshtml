@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/lib/slick/slick.css">
+    <link rel="stylesheet" href="css/lib/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/usre_profile.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="d-block navbar navbar navbar-expand navbar-ligh ">
+        <div class="row m-auto justify-content-center">
+            <!-- LOGO -->
+            <div class="col-6 col-lg-2 m-lg-auto">
+                <div class="header-logo">
+                    <a href="./index.html" class="logo">
+                        <img class="img-fluid" src="./img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- /LOGO -->
+            <!-- SEARCH -->
+            <div class="col-lg-7 m-lg-auto mt-3">
+                <div class="header-search">
+                    <form class="row justify-content-center">
+                        <select class=" col-6 col-md-4 input-select">
+                            <option value="0">All Categories</option>
+                            <option value="1">Category 01</option>
+                            <option value="2">Category 02</option>
+                            <option value="3">Category 03</option>
+                        </select>
+                        <input class="input col-6 col-md-5" placeholder="Book Name">
+                        <button class=" col-12 search-btn col-md-3 mt-1 mt-md-0">Search</button>
+                    </form>
+                </div>
+            </div>
+            <!-- /SEARCH -->
+            <!-- NAVS -->
+            <ul class="navbar-nav col-lg-3  mt-3 justify-content-center text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="./mycart.html">
+                        <i class="d-block text-center fas fa-shopping-cart "></i>
+                        <span>My Cart</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./user_profile.html">
+                        <i class="d-block text-center fas fa-user "></i>
+                        <span>My Account</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="d-block text-center fas fa-sign-out-alt "></i>
+                        <span>Sign Out</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">
+                        <i class="d-block text-center fas fa-sign-in-alt"></i>
+                        <span>Sign In</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- /NAVS-->
+        </div>
+    </nav>
+    <!-- /NAVBAR -->
+    <nav class="navigation" aria-label="breadcrumb ">
+        <div class="container">
+            <ol class="breadcrumb  ">
+                <li class="breadcrumb-item"><a href="/index.html">Store</a></li>
+                <li class="breadcrumb-item " aria-current="page">My Books</li>
+                <li class="breadcrumb-item active" aria-current="page">KINGDOM OF LIES</li>
+            </ol>
+        </div>
+    </nav>
+    <!-- book details -->
+    <div class="container">
+        <div id="" class="bg-white mb-3">
+            <h2 class="text-center header">Book Information</h2>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 ">
+                    <div class="product-img text-center">
+                        <img class="img-fluid" src="./img/product02.png" alt="book cover">
+                    </div>
+                </div>
+                <form action="" class=" p-4 col-lg-6">
+                    <div class="form-group">
+                        <label for="book_title">Book Title</label>
+                        <input type="text" class="form-control" id="book_title" name="book_title"
+                            placeholder="Enter book title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book_author">Book Author</label>
+                        <input type="text" class="form-control" id="book_author" name="book_author"
+                            placeholder="Enter author name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-category">Category</label>
+                        <select class="custom-select" id="book-category">
+                            <option value="1" selected>Science</option>
+                            <option value="2">History</option>
+                            <option value="3">Sports</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-img">Image</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="book-img" name="book-img" required>
+                            <label class="custom-file-label" for="book-img" aria-describedby="inputGroupFileAddon02">
+                                Choose file
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" name="price" placeholder="0.0" min="0.00"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="in_stock">In Stock</label>
+                        <input type="number" class="form-control" id="in_stock" name="in_stock" placeholder="0.0 "
+                            min="0.00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="page_count">Page Count</label>
+                        <input type="number" class="form-control" id="page_count" name="page_count" placeholder="0"
+                            min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight</label>
+                        <input type="number" class="form-control" id="weight" name="weight" placeholder="0" min="0"
+                            required>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-4">
+                            <label for="length">Length</label>
+                            <input type="number" class="form-control" id="length" name="length" placeholder="0 cm"
+                                min="0" required>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="width">Widht</label>
+                            <input type="number" class="form-control" id="width" name="width" placeholder="0 cm" min="0"
+                                required>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="height">Height</label>
+                            <input type="number" class="form-control" id="height" name="height" placeholder="0 cm"
+                                min="0" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" placeholder="Enter book description"
+                            style="min-height: 100px;" required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter book description.
+                        </div>
+                    </div>
+                    <button type="submit" class="">Update</button>
+                    <button class="">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End book details -->
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Contact Us</h3>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>Zagazig, Ash Sharqia, Egypt</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+02-0123456789</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>email@email.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Categories</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Architecture</a></li>
+                                <li><a href="#">Computers and Internet</a></li>
+                                <li><a href="#">Cooking and Food</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Information</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-sm-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Service</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">View Cart</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span class="copyright">
+                            Copyright ©
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved
+                        </span>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+
+    <!-- Start Script -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="css/lib/slick/slick.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>
