@@ -31,7 +31,6 @@ namespace OnlineBookStore.Controllers {
              
                         select r;
             
-            //BookStoreDB.hub_travel_cost.Find(b1.user.cityId).To.city_name == BookStoreDB.Users.Find(User.Identity.GetUserId()).city.city_name)
 
             if (Session["cart"] == null)
             {
