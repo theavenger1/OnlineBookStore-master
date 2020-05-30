@@ -30,12 +30,13 @@ namespace OnlineBookStore.Controllers {
                          where r.FromId==b1.user.cityId && r.ToId == u.cityId
              
                         select r;
-            
+
+            decimal costfromto = model.FirstOrDefault().cost;
 
             if (Session["cart"] == null)
             {
                 List<order_item> cart = new List<order_item>();
-                cart.Add(new order_item {book=b1 ,book_id=b1.Id, Quantity = 1  , Price = (b1.book_cost * model.FirstOrDefault().cost)});
+                cart.Add(new order_item {book=b1 ,book_id=b1.Id, Quantity = 1  , Price = b1.book_cost + ( b1.book_weight * costfromto)});
                 Session["cart"] = cart;
               
             }
@@ -46,11 +47,11 @@ namespace OnlineBookStore.Controllers {
                 if (index != -1)
                 {
                     cart[index].Quantity++;
-                    cart[index].Price = cart[index].Quantity * cart[index].book.book_cost;
+                    cart[index].Price = cart[index].Quantity * cart[index].Price;
                 }
                 else
                 {
-                    cart.Add(new order_item { book = b1 , book_id = b1.Id, Quantity = 1 ,Price=b1.book_cost});
+                    cart.Add(new order_item { book = b1 , book_id = b1.Id, Quantity = 1 ,Price= b1.book_cost + (b1.book_weight * costfromto) });
                 }
                 Session["cart"] = cart;
             }

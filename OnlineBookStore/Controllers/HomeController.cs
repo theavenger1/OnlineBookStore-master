@@ -37,5 +37,29 @@ namespace BookStore.Controllers
             || aa.category.category_name.Contains(searchName)).ToList();
             return View(result);
         }
+        [HttpGet]
+        public ActionResult filterbycatogery(string cat)
+        {
+            var model = from b in db.books
+                        where b.category.category_name.Contains(cat)
+                        select b;
+
+
+            return View("Index", model);
+        }
+
+        public ActionResult filterbyprice(string max, string min)
+        {
+
+            decimal Max = decimal.Parse(max);
+            decimal Min = decimal.Parse(min);
+            var model = from b in db.books
+                        where      ( Max >b.book_cost)&& (b.book_cost  >Min)
+                        select b;
+
+
+            return View("Index", model);
+        }
+
     }
 }

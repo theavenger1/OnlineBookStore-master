@@ -36,7 +36,7 @@ namespace BookStore.Models
        // [StringLength(45)]
         public string book_image { get; set; }
 
-        public int? book_weight { get; set; }
+        public int book_weight { get; set; }
 
         public int? book_height { get; set; }
 
